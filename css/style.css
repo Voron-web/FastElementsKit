@@ -1,0 +1,16 @@
+body {
+  padding-top: 100px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.accordeon {
+  border: 1px solid rgba(0, 0, 0, 0.1843137255);
+  border-radius: 10px;
+}
+.accordeon .fek-accordeon__item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.231372549);
+}/*# sourceMappingURL=style.css.map */

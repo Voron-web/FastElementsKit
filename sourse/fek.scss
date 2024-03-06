@@ -1,4 +1,48 @@
 :root {
+    //Accordeon
     --accordeon-title-color: #000;
     --accordeon-text-color: #000;
+    --accordeon-title-padding: 10px;
+    --accordeon-content-padding: 10px;
+    --accordeon-indicator-size: 20px;
+    --accordeon-indicator-transform: 180deg;
+    --accordeon-indicator-transform-hidden: 0deg;
+}
+
+/********************* FEK Accordeon ***********************/
+
+.fek-accordeon {
+    &__title {
+        position: relative;
+        padding: var(--accordeon-title-padding);
+        cursor: pointer;
+        &.hidden .fek-accordeon__indicator {
+            transform: translate(0, -50%) rotate(var(--accordeon-indicator-transform-hidden));
+            // transform: translate(0, -50%) rotate(0deg);
+        }
+    }
+
+    &__content {
+        padding: var(--accordeon-content-padding);
+    }
+    &__content-wrapper {
+        overflow: hidden;
+        &.hidden {
+            max-height: 0;
+        }
+    }
+    &__indicator {
+        height: var(--accordeon-indicator-size);
+        aspect-ratio: 1/1;
+        position: absolute;
+        top: 50%;
+        right: var(--accordeon-title-padding);
+        transition: transform 0.5s;
+        transform: translate(0, -50%) rotate(var(--accordeon-indicator-transform));
+        z-index: 0;
+        & svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
 }

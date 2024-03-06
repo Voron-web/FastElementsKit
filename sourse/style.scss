@@ -1,0 +1,17 @@
+body {
+    padding-top: 100px;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.accordeon {
+    border: 1px solid #0000002f;
+    border-radius: 10px;
+    & .fek-accordeon__item:not(:last-child) {
+        border-bottom: 1px solid #0000003b;
+    }
+    & .fek-accordeon__indicator {
+    }
+}
